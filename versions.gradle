@@ -25,7 +25,11 @@ deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_g
 ext.deps = deps
 
 def addRepos(RepositoryHandler handler) {
-    handler.google()
-    handler.jcenter()
+    handler.maven {
+        url 'https://maven.aliyun.com/repository/google'
+    }
+    handler.maven {
+        url 'https://maven.aliyun.com/repository/jcenter'
+    }
 }
 ext.addRepos = this.&addRepos

@@ -40,7 +40,7 @@ sealed class ApiResponse<T> {
                 } else {
                     ApiSuccessResponse(
                         body = body,
-                        linkHeader = response.headers()?.get("link")
+                        linkHeader = response.headers().get("link")
                     )
                 }
             } else {
