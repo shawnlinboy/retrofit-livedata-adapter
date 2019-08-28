@@ -1,3 +1,4 @@
+apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
@@ -22,6 +23,22 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+}
+
+publish {
+
+    def groupProjectID = 'me.linshen.retrofit2'
+    def artifactProjectID = 'adapter-livedata'
+    def publishVersionID = '1.0.0'
+
+    userOrg = 'shawnlinboy'
+    repoName = 'retrofit-livedata-converter'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = 'An Android library for adding LiveData support for Retrofit2.'
+    website = 'https://github.com/shawnlinboy/retrofit-livedata-adapter'
 
 }
 
