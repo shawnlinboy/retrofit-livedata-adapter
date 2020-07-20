@@ -2,7 +2,7 @@ package me.linshen.retrofit2.adapter.livedata.demo.vo
 
 import com.google.gson.annotations.SerializedName
 
-data class User(
+data class UserVO(
     @SerializedName("login")
     val login: String,
     @SerializedName("avatar_url")
